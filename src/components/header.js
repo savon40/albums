@@ -6,6 +6,8 @@ import {
   View
 } from 'react-native';
 
+//props passes data from parent to child
+
 // make a component - return JSX component
 const Header = (props) => {
 	const {textStyle, viewStyle} = styles;
