@@ -3,7 +3,8 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  ScrollView
 } from 'react-native';
 import axios from 'axios';
 import AlbumDetail from './AlbumDetail';
@@ -26,7 +27,6 @@ class AlbumList extends Component {
 
 		//returns a promise (not asynchronous) - 
 		//promise returns an event that tells us it is complete
-		
 		axios.get('https:////rallycoding.herokuapp.com/api/music_albums')
 			.then(response => this.setState({albums: response.data}));
 	}
@@ -43,9 +43,9 @@ class AlbumList extends Component {
 	render() {
 		console.log(this.state);
 		return (
-			<View>
+			<ScrollView>
 				{this.renderAlbums()}
-			</View>
+			</ScrollView>
 		);
 	}
 } //class doesnt need semi-colon
