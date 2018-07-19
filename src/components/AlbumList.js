@@ -22,8 +22,8 @@ class AlbumList extends Component {
 	state = { albums: [] };
 
 	componentWillMount() {
-		//get request to get data
-		console.log('i am here');
+		//this action kicks off right when this component loads
+		//we will use it to fetch data from API
 
 		//returns a promise (not asynchronous) - 
 		//promise returns an event that tells us it is complete
